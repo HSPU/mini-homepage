@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/diary.css" />
+    <link rel="stylesheet" href="./static/home.css" />
+    <script src="https://kit.fontawesome.com/29de615d04.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bookcover">
+        <div class="bookdot">
+            <div class="page">
+                <div class="container">
+                    <div class="column1">
+                        <div class="row1 box">TODAY <a>3</a> | TOTAL 602</div>
+                        <div class="row2 box">
+                            <div class="img box">
+                                <img src="./static/images/123.jpg" width="100%" height="100%" alt="images">
+                            </div>
+                            <div class="main box">하.. 지겹다..
+                                <br>언제 성인되냐....
+                                <div class="profile-dropdown">
+                                    <div class="dropdown-btn">
+                                        <div class="dropdown-title">파도타기</div>
+                                        <div class="triangle-down"></div>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                                        <a href="https://www.instagram.com/coding_comu/" target="_blank">인스타그램으로 가기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column2">
+                        <div class="row3 box">
+                            <div class="column4 box">『 ** 2010 추억의 싸이월드 ** 』</div>
+                            <div class="column5 box">https://www.cywooooooorld.com/</div>
+                        </div>
+                        <div class="row4 box">
+                            <div class="diary">
+                                <div class="box1">
+                                    <div class="today">2010.09.11 <br>FRI</div>
+                                    <div class="calendar">
+                                        <span class="day">1</span>
+                                        <span class="day">2</span>
+                                        <span class="day">3</span>
+                                        <span class="sat">4</span>
+                                        <span class="sun">5</span>
+                                        <span class="day">6</span>
+                                        <span class="day">7</span>
+                                        <span class="day">8</span>
+                                        <span class="day">9</span>
+                                        <span class="day">10</span>
+                                        <span class="sat">11</span>
+                                        <span class="sun">12</span>
+                                        <span class="day">13</span>
+                                        <span class="day">14</span>
+                                        <span class="day">15</span>
+                                        <span class="day">16</span>
+                                        <span class="day">17</span>
+                                        <span class="sat">18</span>
+                                        <span class="sun">19</span>
+                                        <span class="day">20</span>
+                                        <span class="day">21</span>
+                                        <span class="day">22</span>
+                                        <span class="day">23</span>
+                                        <span class="day">24</span>
+                                        <span class="sat">25</span>
+                                        <span class="sun">26</span>
+                                        <span class="day">27</span>
+                                        <span class="day">28</span>
+                                        <span class="day">29</span>
+                                        <span class="day">30</span>
+                                    </div>
+                                </div>
+                                <div class="box2">
+                                    <div class="diarybox">
+                                        <div class="title">2010.09.10 금 21:30</div>
+                                        <div class="content">
+                                            일기는 초딩 때 많이 써봐서 또 쓰기 시름 .
+                                            <br>그래서 약 3줄만 쓰고 말거임 .
+                                            <br>그래서 이게 오늘의 일기임 .
+                                        </div>
+                                    </div>
+                                    <div class="diarybox">
+                                        <div class="title">2010.09.02 목 22:09</div>
+                                        <div class="content">
+                                            오늘 아침에 지각한 사람
+                                            <br>오늘 3교시에 방구 뀐 사람
+                                            <br>오늘 점심시간에 배식 안한 사람
+                                            <br>오늘 5교시에 지우개 던진 사람
+                                            <br>오늘 방과후에 청소 짼 사람
+                                            <br>내일보자 ㅎㅎ
+                                            <br>^^
+                                        </div>
+                                    </div>
+                                    <div class="diarybox">
+                                        <div class="title">2010.09.01 수 20:40</div>
+                                        <div class="content">
+                                            공 부 하 기 싫 다
+                                            <br>나 랑 놀 사 람 ?
+                                        </div>
+                                    </div>
+                                    <div class="secret">
+                                        <button class="diary-button" onclick="getTextFile()">
+                                            <i class="fas fa-lock icon"></i> 비 밀 일 기 장
+                                        </button>
+                                        <div class="diarybox" id="secret-box">
+                                            <div class="title">#마 시크릿 일기</div>
+                                            <div class="content" id="secret-diary"></div>
+                                        </div>
+                                        <script>
+                                            function getTextFile() {
+                                                var input = document.createElement("input");
+                                                input.type = "file";
+                                                input.accept = "text/plain";
+                                                input.onchange = function (event) {
+                                                    processFile(event.target.files[0]);
+                                                };
+                                                input.click();
+                                            }
+
+                                            function processFile(file) {
+                                                var reader = new FileReader();
+                                                reader.readAsText(file, "utf-8");
+
+                                                reader.onload = function () {
+                                                    document.getElementById("secret-diary").innerText = reader.result;
+                                                    document.getElementById("secret-box").style.display = "block";
+                                                };
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column3">
+                        <div class="row5 box">
+                            <div class="menu">
+                                <a href="./홈.html"><button>홈</button></a>
+                                <a href="./다이어리.html"><button>다이어리</button></a>
+                                <a href="./사진첩.html"><button>사진첩</button></a>
+                                <a href="./방명록.html"><button>방명록</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

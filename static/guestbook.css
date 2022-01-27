@@ -1,0 +1,68 @@
+.row4 {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(170, 170, 170);
+    overflow: auto;
+}
+
+.guestbook {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 10px;
+    overflow: auto;
+}
+
+.guestbook > .box {
+    background-color: rgb(218, 218, 218);
+    height: 80px;
+    font-size: larger;
+    color: black;
+    margin: 10px 0 15px;
+    padding: 10px 15px 10px;
+    font-family: 'ACCchildrenheartOTF-Regular';
+    font-weight: bolder;
+}
+
+.guestbook-box {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px 80px;
+    position: relative;
+}
+
+.guestbook-image {
+    flex: 0.3;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.background-1 {
+    background-image: url("./images/background-1.png");
+}
+
+.background-2 {
+    background-image: url("./images/background-2.png");
+}
+
+.background-3 {
+    background-image: url("./images/background-3.png");
+}
+
+.guestbook-image > img {
+    width: 25%;
+}
+
+.guestbook-contents {
+    font-family: 'HSYuji-Regular';
+    margin-left: 50px;
+}
+
+span {
+    color: #015c7e;
+}
